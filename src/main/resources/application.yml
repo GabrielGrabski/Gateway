@@ -13,6 +13,8 @@ spring:
     name: gateway
   cloud:
     gateway:
+      filters:
+        - AddRequestHeader: Bearer
       routes:
         - id: gestao-produtos
           uri: http://localhost:8080/
